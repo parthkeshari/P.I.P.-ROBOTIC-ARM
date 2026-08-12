@@ -50,31 +50,31 @@ The entire experience is designed to feel conversational and responsive.
 
 1. Clone the repository:
 
-\`\`\`bash
+```bash
 git clone <your-repo-url>
 cd <your-repo-name>
-\`\`\`
+```
 
 2. Create and activate a virtual environment:
 
-\`\`\`bash
+```bash
 python -m venv .venv
 source .venv/bin/activate   # On Windows: .venv\Scripts\activate
-\`\`\`
+```
 
 3. Install dependencies:
 
-\`\`\`bash
+```bash
 pip install -r requirements.txt
-\`\`\`
+```
 
 4. Set up your environment variables:
 
 Copy the example file and fill in your own values:
 
-\`\`\`bash
+```bash
 cp .env.example .env
-\`\`\`
+```
 
 Then open `.env` and fill in your Groq API key and Cyberwave credentials.
 
@@ -84,9 +84,9 @@ Then open `.env` and fill in your Groq API key and Cyberwave credentials.
 
 Run the companion:
 
-\`\`\`bash
+```bash
 python companion_local.py
-\`\`\`
+```
 
 ### Controls
 
@@ -96,27 +96,27 @@ python companion_local.py
 
 ### Example Interaction
 
-\`\`\`text
+```text
 [Enter=mic | type text | quit]
 Recording...
 STT: "Hey, wake up"
 intent: WAKE
 reply: "Hi, I'm up..."
 gesture: PEAK
-\`\`\`
+```
 
 ---
 
 ## Project Structure
 
-\`\`\`text
+```text
 .
-├── companion_local.py      # Main application
+├── companion_local.py
 ├── requirements.txt
-├── .env.example             # Template for environment variables
+├── .env.example
 ├── README.md
 └── ...
-\`\`\`
+```
 
 ---
 
