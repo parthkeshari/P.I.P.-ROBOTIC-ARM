@@ -31,7 +31,7 @@ The entire experience is designed to feel conversational and responsive.
 - **Speech-to-Text**: Groq STT
 - **Text-to-Speech**: Edge TTS
 - **Language Model**: Groq
-- **Robot Control**: Cyberwave MQTT
+- **Robot Control**: Cyberwave
 - **Audio**: pygame + sounddevice
 - **Language**: Python 3.10+
 
@@ -42,7 +42,7 @@ The entire experience is designed to feel conversational and responsive.
 - Python 3.10 or higher
 - Microphone and speakers
 - Groq API key
-- Access to Cyberwave MQTT broker
+- Cyberwave API key and Twin/Environment access
 
 ---
 
@@ -76,7 +76,7 @@ Copy the example file and fill in your own values:
 cp .env.example .env
 \`\`\`
 
-Then open `.env` and fill in your Groq API key, Cyberwave MQTT broker details, and environment/robot UUID.
+Then open `.env` and fill in your Groq API key and Cyberwave credentials.
 
 ---
 
@@ -127,10 +127,10 @@ All configuration is managed through a `.env` file. Use `.env.example` as a star
 | Variable | Description |
 |---|---|
 | `GROQ_API_KEY` | Your Groq API key for STT and LLM calls |
-| `CYBERWAVE_ENVIRONMENT_UUID` | UUID of your Cyberwave environment |
-| `CYBERWAVE_ROBOT_ID` | ID of the target robot |
 | `CYBERWAVE_API_KEY` | Your Cyberwave API key |
-| `CW_MODE` | Use Playground mode |
+| `CYBERWAVE_TWIN_ID` | ID of the robot twin |
+| `CYBERWAVE_ENVIRONMENT_ID` | ID of your Cyberwave environment |
+| `CW_MODE` | Cyberwave mode (e.g. `playground`) |
 
 Never commit your actual `.env` file, only `.env.example` should be tracked in git.
 
@@ -141,7 +141,6 @@ Never commit your actual `.env` file, only `.env.example` should be tracked in g
 You can adjust the following inside the code or via environment variables:
 
 - Recording duration
-- MQTT broker settings
 - Joint names (`_1` to `_6`)
 - Voice settings for Edge TTS
 - System prompt for the LLM
